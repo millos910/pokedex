@@ -1,0 +1,25 @@
+.pokecard{
+    width: 100%;
+    max-width: 350px;
+    font-size: 1em;
+    border-radius: 0.5em;
+    border: 0.5em solid #ccc;
+}
+.pokecard__header{
+    aspect-ratio: 1.8;
+    position: relative;
+    background-color: #ccc;
+}
+.pokecard__img{
+    position: absolute;
+    width: 60%;
+    bottom: -3em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pokecard__body{
+    padding-top: 3em;
+}
+.pokecard__name{
+    text-align: center;
+}

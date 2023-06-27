@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import useFetch from '../../../../hooks/usefetch'
 import {useNavigate} from 'react-router-dom'
+import './styles/pokecard.css'
 const PokeCard = ({url}) => {
     const [pokemon,getPokemonById]=useFetch(url)
     useEffect(()=>{
@@ -11,27 +12,27 @@ const PokeCard = ({url}) => {
         navigate(`/pokedex/${pokemon.name}`)
     }
     return (
-    <article onClick={handleNavigate} style={{border:'1px solid black'}}>
-        <header>
-            <img src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
+    <article className='pokecard' onClick={handleNavigate}>
+        <header className='pokecard__header'>
+            <img className='pokecard__img' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
         </header>
-        <section>
-            <h3>{pokemon?.name}</h3>
-            <ul>
+        <section className='pokecard__body'>
+            <h3 className='pokecard__name'>{pokemon?.name}</h3>
+            <ul className='pokecard__types'>
                 {
                     pokemon?.types.map(typeinfo=> (
-                        <li key={typeinfo.type.url}>{typeinfo.type.name}</li>
+                        <li className='pokecard__type_item' key={typeinfo.type.url}>{typeinfo.type.name}</li>
                     ))
                 }
             </ul>
         </section>
-        <footer>
-            <ul>
+        <footer className='pokecard__footer'>
+            <ul className='pokecard__stats'>
                 {
                     pokemon?.stats.map(statInfo=>(
-                        <li key={statInfo.stat.url}>
-                            <span>{statInfo.stat.name}</span>
-                            <span>{statInfo.base_stat}</span>
+                        <li className='pokecard__stats_item' key={statInfo.stat.url}>
+                            <span className='pokecard__stats_label'>{statInfo.stat.name}</span>
+                            <span className='pokecard__stats_value'>{statInfo.base_stat}</span>
                         </li>
                     ))
                 }
