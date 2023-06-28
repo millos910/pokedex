@@ -12,8 +12,9 @@ const PokeCard = ({url}) => {
         navigate(`/pokedex/${pokemon.name}`)
     }
     return (
-    <article className='pokecard' onClick={handleNavigate}>
-        <header className='pokecard__header'>
+        <div className='main_card'> 
+    <article className={`pokecard ${pokemon?.types[0].type.name}`} onClick={handleNavigate}>
+        <header className={`pokecard__header bg_${pokemon?.types[0].type.name}`}>
             <img className='pokecard__img' src={pokemon?.sprites.other['official-artwork'].front_default} alt="" />
         </header>
         <section className='pokecard__body'>
@@ -21,7 +22,7 @@ const PokeCard = ({url}) => {
             <ul className='pokecard__types'>
                 {
                     pokemon?.types.map(typeinfo=> (
-                        <li className='pokecard__type_item' key={typeinfo.type.url}>{typeinfo.type.name}</li>
+                        <li className='pokecard__type_item' key={typeinfo.type.url}><span>{typeinfo.type.name}</span></li>
                     ))
                 }
             </ul>
@@ -39,6 +40,7 @@ const PokeCard = ({url}) => {
             </ul>
         </footer>
     </article>
+    </div>
   )
 }
 export default PokeCard

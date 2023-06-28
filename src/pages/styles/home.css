@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Exo+2:ital,wght@1,200&family=IBM+Plex+Sans:wght@300&family=Pangolin&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.home__main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home__img{
+    height: 400px;
+    width: 600px;
+}
+.home__text{
+    font-family: sans-serif;
+    height: 4rem;
+}
+.home__main h2{
+    color: red;
+    font-size: 2rem;
+}
+.home__text__p{
+    font-size: 1.2rem;
+}
+.home__footer{
+    padding-top: 8em;
+}
+
+
+
+

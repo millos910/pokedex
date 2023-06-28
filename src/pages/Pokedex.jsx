@@ -4,6 +4,7 @@ import {useSelector} from'react-redux'
 import PokemosContainer from '../assets/components/home/pokedex/PokemosContainer'
 import {useNavigate} from'react-router-dom'
 import axios from'axios'
+import './styles/pokedex.css'
 const Pokedex = () => {
   const [selectValue,setSelectValue]=useState('all-pokemos')
   const trainerName=useSelector(states=>states.trainerName)
@@ -43,21 +44,28 @@ const Pokedex = () => {
 
   }
   return (
-    <div>
-    <p>Hi, <span>{trainerName}!</span>, you can find your favorite pokemon?</p>
-    <form onSubmit={handlesubmit}>
-      <input ref={serchPokemon} type="text" />
-      <button>Serch</button>
-    </form>
-    <select onChange={handleChangeType}>
-      <option value='all-pokemons'>All Pokemos</option>
-      {
-        types?.results.map(typeInfo=>(
-          <option key={typeInfo.url} value={typeInfo.url}>{typeInfo.name}</option>
-        ))
-      }
-
-    </select>
+    <div className='navigator'>
+      <header className='text__header'>
+        <img className='header__img' src="https://reader.digitalbooks.pro/content/preview/books/42131/book/OEBPS/image/Header.jpg" alt="HEADER" />
+        <h1 className='h1-header'>Pokedex API</h1>
+      </header>
+      <div className='serch_section'>
+        <p className='serch_text'><span className='span__first__text'>Welcome, {trainerName}!</span>, you can find your favorite pokemon?</p>
+        <form className='serch_form' onSubmit={handlesubmit}>
+          <input ref={serchPokemon} type="text"/>
+          <button>Serch</button>
+        </form>
+      </div>
+      <div className='select__container'> 
+      <select className='selector' onChange={handleChangeType}>
+        <option value='all-pokemons'>All Pokemos</option>
+        {
+          types?.results.map(typeInfo=>(
+            <option key={typeInfo.url} value={typeInfo.url}>{typeInfo.name}</option>
+          ))
+        }
+      </select>
+    </div>
     <PokemosContainer pokemos={pokemos?.results}/>
     </div>
     )

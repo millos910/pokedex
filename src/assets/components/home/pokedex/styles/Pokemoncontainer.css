@@ -1,0 +1,11 @@
+
+body{
+    padding-top: 1.5rem;
+}
+.container__pokemon{
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
