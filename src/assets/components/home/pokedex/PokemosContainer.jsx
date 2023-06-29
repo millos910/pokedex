@@ -1,6 +1,6 @@
 import React from 'react'
 import PokeCard from './PokeCard';
-import './styles/pokemoncontainer.css';
+import './styles/Pokemoncontainer.css';
 const PokemosContainer = ({pokemos}) => {
     console.log(pokemos);
   return (
