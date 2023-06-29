@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState} from 'react'
-import useFetch from '../hooks/usefetch'
+import useFetch from '../hooks/useFetch'
 import {useSelector} from'react-redux'
 import PokemosContainer from '../assets/components/home/pokedex/PokemosContainer'
 import {useNavigate} from'react-router-dom'

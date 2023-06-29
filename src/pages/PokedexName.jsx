@@ -1,5 +1,5 @@
 import {useParams} from'react-router-dom'
-import useFetch from '../hooks/usefetch'
+import useFetch from '../hooks/useFetch'
 import { useEffect } from 'react'
 import './styles/pokedexName.css'
 

@@ -5,8 +5,6 @@ import Pokedex from './pages/Pokedex'
 import ProtectedRoutes from './pages/ProtectedRoutes'
 import PokedexName from './pages/PokedexName'
 function App() {
- 
-
   return (
     <div>
       <Routes>
