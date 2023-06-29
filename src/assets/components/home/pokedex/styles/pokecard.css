@@ -54,7 +54,7 @@
     content: '';
 }
 .pokecard__stats{
-    padding: 0.5em 0.5em 2em;
+    padding: 0.9em 1em 1.5em 2.5em;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     justify-items: center;
@@ -65,7 +65,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.3em;
+    gap: 0.8em;
     color: black;
 }
 .pokecard__stats_label{

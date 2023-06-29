@@ -69,8 +69,11 @@ const PokedexName = () => {
                 {
                     pokemon?.stats.map(statInfo=>(
                         <li className='descprition__value__stats' key={statInfo.stat.url}>
-                            <div className='barra__stats1'><span>{statInfo.stat.name}</span></div>
-                            <div className='barra__stats2'><span className='barra__principal'> {statInfo.base_stat} /150</span></div>
+                            <div className='barra__stats1'>
+                            <span>{statInfo.stat.name}</span></div>
+                            <div className='barra__stats2' style={{ width: `${(statInfo.base_stat / 150) * 100}%` }}>
+                            <span className='barra__principal'>{statInfo.base_stat} / 150</span>
+                            </div>
                         </li>))
                 }
         </ul>
