@@ -40,17 +40,17 @@
     gap: 2em;
     color: black;
 }
-.pokecard__types_item{
+.pokecard__type_item{
     text-transform: capitalize;
     position: relative;
     color: black;
 }
-.pokecard__types_item::before{
-    content: '/';
+.pokecard__type_item::before{
+    content: '/';   
     position: absolute;
     left: -1em;
 }
-.pokecard__types_item:first-child::before{
+.pokecard__type_item:first-child::before{
     content: '';
 }
 .pokecard__stats{

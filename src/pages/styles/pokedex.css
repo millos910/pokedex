@@ -27,6 +27,7 @@ p{
 form{
     display: flex;
     height: 2.5rem;
+    border: 1px solid black;
 }
 button{
     font: inherit;
@@ -36,6 +37,7 @@ button{
     border-radius: 0.2em;
     width: 8rem;
     height: 2.5rem;
+    cursor: pointer;
 }
 .select__container{
     display: flex;
@@ -45,12 +47,11 @@ button{
     padding: 1.5rem;
 }
 .selector{
-    
     color: black;
     display: flex;
     height: 1.2rem;
     width:10rem;
-
+    border: 1px solid black;
     border-radius: 0.2em;
 }
 select{
